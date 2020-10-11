@@ -1,0 +1,22 @@
+extends layout/layout.pug
+
+block content
+    // begin home
+    section#home.home.section
+        .container_center
+            .home__content
+                .home__left
+                    .home__img
+                        <img src="<?php echo get_template_directory_uri() ?>/img/home_img.png" />
+                .home__right
+                    h1.section__title Решения компании HiPer Tech делают 
+                        span достижение и поддержание высокой эффективности 
+                        br
+                        |в эксплуатации инженерных систем выгодными
+                    .home__sub Вы можете управлять лишь тем, что вы измеряете. Сделайте первый шаг к достижению высокой эффективности! 
+                        span HiPer It!
+                    .home__action
+                        button.btn.btn_plus
+                            span HiPer CHECKUP
+
+    // end home
