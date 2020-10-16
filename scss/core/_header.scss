@@ -1,8 +1,17 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 1.3em 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	// background-color: #ddd;
+
+	@media (min-width: 768px) {
+		padding: 2.1em 0;
+	}
 
 	&__content {
 		@extend .container_center;
@@ -10,6 +19,30 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	&__left {
+		width: 9.938em;
+		margin-right: 5.2em;
+		flex: none;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__right {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
 }
 
 // stiky menu

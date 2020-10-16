@@ -1,22 +1,38 @@
 // Social link
-.soc {
-	float: left;
-	a {
-		display: inline-block;
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
-		background-color: #000;
-		text-align: center;
-		text-decoration: none;
-		@include trs(0.3s);
-		&:hover {
-			opacity: .8;
-		}
-		&:before {
-			content: 'soc';
-			color: #fff;
-			text-decoration: none;
-		}
-	}
-}
+
+// .soc {
+// 	// float: left;
+// 	a {
+// 		display: inline-block;
+// 		text-align: center;
+// 		text-decoration: none;
+// 		font-size: 2.2em;
+//
+// 		&:hover {
+// 			opacity: 0.8;
+// 		}
+//
+// 		&:before {
+// 			color: $main_color;
+// 			font-family: '#{$icomoon-font-family}';
+// 		}
+//
+// 		&[href*="facebook"] {
+// 			&:before {
+// 				content: $icon_facebook;
+// 			}
+// 		}
+//
+// 		&[href*="instagram"] {
+// 			&:before {
+// 				content: $icon_instagram;
+// 			}
+// 		}
+//
+// 		&[href*="vk"] {
+// 			&:before {
+// 				content: $icon_vk;
+// 			}
+// 		}
+// 	}
+// }

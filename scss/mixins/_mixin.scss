@@ -26,6 +26,86 @@
 	column-width: $width; // Min width for columns
 }
 
+@mixin plus($size: 1.2em, $offset: 0.75em) {
+	position: relative;
+
+	&:after,
+	&:before {
+		font-family: '#{$icomoon-font-family}';
+		content: $icon_plus;
+		color: $color_primary;
+		font-size: $size;
+		position: absolute;
+		left: -$offset;
+		font-weight: 300;
+		transition: 0.2s;
+		transition-property: left, top, bottom;
+	}
+
+	&:before {
+		top: -$offset;
+	}
+
+	&:after {
+		bottom: -$offset;
+	}
+
+	> span {
+		&:after,
+		&:before {
+			font-family: '#{$icomoon-font-family}';
+			content: $icon_plus;
+			color: $color_primary;
+			font-size: 1.313em;
+			display: block;
+			position: absolute;
+			right: -$offset;
+			font-weight: 300;
+			transition: 0.2s;
+			transition-property: right, top, bottom;
+		}
+
+		&:before {
+			top: -$offset;
+		}
+
+		&:after {
+			bottom: -$offset;
+		}
+	}
+
+	&:hover {
+		&:after,
+		&:before {
+			left: -$offset*1.3;
+
+		}
+
+		&:before {
+			top: -$offset*1.3;
+		}
+
+		&:after {
+			bottom: -$offset*1.3;
+		}
+
+		> span {
+			&:after,
+			&:before {
+				right: -$offset*1.3;
+			}
+
+			&:before {
+				top: -$offset*1.3;
+			}
+
+			&:after {
+				bottom: -$offset*1.3;
+			}
+		}
+	}
+}
+
 // Float el clear
 %clear_a {
 	&:after {
@@ -151,8 +231,8 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	> a,
-	> div {
+	> div,
+	> a {
 		display: flex;
 		padding-left: $gup;
 		width: 100% / $size;

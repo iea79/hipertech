@@ -41,7 +41,12 @@ $(document).ready(function() {
 
     // checkOnResize();
 
+    $('.home__bg').show();
+
+
 });
+
+var wow = new WOW().init();
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
@@ -97,6 +102,7 @@ function openMobileNav() {
         var wrapp = $('.nav');
 
         wrapp.toggleClass('open');
+        $(this).toggleClass('active');
     });
 };
 openMobileNav();
@@ -149,7 +155,7 @@ function uploadYoutubeVideo() {
             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-            $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+            // $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
 
         });
 
@@ -165,6 +171,7 @@ function uploadYoutubeVideo() {
             let iframe = $('<iframe/>', {
                 'frameborder': '0',
                 'src': iframe_url,
+                'allow': "autoplay"
             })
 
             // Заменяем миниатюру HTML5 плеером с YouTube
@@ -173,6 +180,8 @@ function uploadYoutubeVideo() {
         });
     }
 };
+
+uploadYoutubeVideo();
 
 
 // Деление чисел на разряды Например из строки 10000 получаем 10 000

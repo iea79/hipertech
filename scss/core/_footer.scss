@@ -2,13 +2,33 @@
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 3.3em 0;
+	background-color: #fff;
+	color: #727272;
+
+	.lines__item {
+		padding: 0;
+	}
+
+	a {
+		color: #727272;
+		text-decoration: underline;
+		margin: 1em;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 
 	&__content {
 		@extend .container_center;
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		// justify-content: space-between;
 		align-items: center;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
 	}
 }

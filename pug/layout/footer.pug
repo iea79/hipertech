@@ -1,8 +1,15 @@
 footer.footer
+    .lines
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+
     .footer__content
-        p
-            | &copy; 2016 |
-            i.fa.fa-github(aria-hidden='true') &nbsp;
-            a(href='#') View Source
-    |
-    |<?php wp_footer() ?>
+        | © HiPer. <?php echo SCF::get( 'copy' ); ?> 
+        <a href="<?php echo SCF::get( 'privacy__link' ); ?>"><?php echo SCF::get( 'privacy' ); ?></a>
+        |
+        |<?php wp_footer() ?>

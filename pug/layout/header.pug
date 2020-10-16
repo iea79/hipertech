@@ -2,10 +2,21 @@ header.header
     .header__content
         .header__left
             a.logo(href="/")
-                <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="alt" />
-        nav.header__right
+                <img src="<?php echo wp_get_attachment_url(SCF::get( 'logotip' )) ?>" />
+        .navbar__toggle
+        nav.header__right.nav
             ul.navbar
-                each navLink in [{name: 'Платформа HiPer', href: ''},{name: 'Принцип работы', href: ''},{name: 'Преимущества', href: ''},{name: 'Решения', href: ''},{name: 'Пакеты услуг', href: ''},{name: 'Контакты', href: ''},]
+                |<?php
+                |    $nav = SCF::get('nav');
+                |
+                |    foreach ($nav as $item) {
+                |        echo '
+                |        <li class="navbar__item"><a class="navbar__link" href="'.$item["nav__link"].'">'.$item["nav__text"].'</a></li>
+                |        ';
+                |    };
+                |?>
+
+                //- each navLink in [{name: 'Платформа HiPer', href: ''},{name: 'Принцип работы', href: ''},{name: 'Преимущества', href: ''},{name: 'Решения', href: ''},{name: 'Пакеты услуг', href: ''},{name: 'Контакты', href: ''},]
                     li.navbar__item
                         a.navbar__link(href= navLink.href)= navLink.name
 

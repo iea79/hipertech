@@ -1,16 +1,17 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
+$main_font_family: "Segoe UI";
 $main_color: #000;
 $main_line_height: 1.2;
 $main_font_size: 16px;
 
-$container_width: 80em;
+$container_width: 118.5em;
+// $container_width: 107.5em;
 
 $footer_height: auto;
 
 // Color collection for elements
-$color_primary: #7b8287;
+$color_primary: #139ddd;
 $color_success: #36a566;
 $color_info: #03a9f4;
 $color_warning: #fca33e;
@@ -36,23 +37,23 @@ $grid_padding: 20px;
 // Input color
 $input_color: $main_color;
 $input_bg_color: #fff;
-$input_border_color: #ddd;
-$input_placeholder_color: #ddd;
+$input_border_color: #ccc;
+$input_placeholder_color: #858585;
 
 // Input hover color
-$input_hover_color: #fff;
+$input_hover_color: $main_color;
 $input_hover_bg_color: #fff;
 $input_hover_border_color: #ddd;
 $input_hover_placeholder_color: #ddd;
 
 // Input focus color
-$input_focus_color: #fff;
+$input_focus_color: $main_color;
 $input_focus_bg_color: #fff;
 $input_focus_border_color: #ddd;
 $input_focus_placeholder_color: #ddd;
 
 // Input disabled color
-$input_disabled_color: #fff;
+$input_disabled_color: #ccc;
 $input_disabled_bg_color: #ccc;
 $input_disabled_border_color: #ccc;
 $input_disabled_placeholder_color: #fff;
@@ -64,10 +65,11 @@ $input_error_border_color: red;
 $input_error_placeholder_color: red;
 
 // Button variables
-$btn_default_bg_color: #ddd;
+$btn_default_bg_color: #139ddd;
 $btn_default_text_color: $main_color;
 $btn_contrast_text_color: $color_withe;
-$btn_default_bg_color_hover: #ccc;
+$btn_default_bg_color_hover: lighten($btn_default_bg_color, 5%);
+$btn_default_bg_color_active: darken($btn_default_bg_color, 5%);
 
 /* Breakpoints */
 $breakpoint-small: 480px !default;
