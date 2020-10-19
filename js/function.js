@@ -46,7 +46,34 @@ $(document).ready(function() {
 
 });
 
-var wow = new WOW().init();
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       false,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+        let img = $(box).find('img');
+        let path = img.attr('src');
+        // console.log(box);
+        // console.log(path);
+        // // $(box).hide();
+        // // $(box).show();
+        $.get(path, function(data) {
+            var svgEl = $(data);
+            $(img).hide();
+            $(img).parent().append(svgEl);
+        }, 'text');
+        setTimeout(function () {
+        }, 500);
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+  }
+);
+wow.init();
+// $('.wow').hide();
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
@@ -82,20 +109,21 @@ function stikyMenu() {
         }
 
         $('.navbar__link').each(function(index, el) {
-            let section = $(this).attr('href');
-
-            if ($('section').is(section)) {
-                let offset = $(section).offset().top;
-
-                if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
-                    $(this).addClass('active');
-                } else {
-                    $(this).removeClass('active');
-                }
-            }
+            // let section = $(this).attr('href');
+            //
+            // if ($('section').is(section)) {
+            //     let offset = $(section).offset().top;
+            //
+            //     if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
+            //         $(this).addClass('active');
+            //     } else {
+            //         $(this).removeClass('active');
+            //     }
+            // }
         });
     }
 };
+stikyMenu();
 
 function openMobileNav() {
     $('.navbar__toggle').on('click', function() {
@@ -109,24 +137,26 @@ openMobileNav();
 
 // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 function srollToId() {
-    $('[data-scroll-to]').click( function(){
-        var scroll_el = $(this).attr('href');
-        if ($(scroll_el).length != 0) {
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    $('[data-scroll-to]').click( function(e){
+        e.preventDefault();
+        var scrollEl = $(this).attr('href');
+        if ($(scrollEl).length != 0) {
+            $('html, body').animate({ scrollTop: $(scrollEl).offset().top }, 500);
         }
         return false;
     });
 }
+srollToId();
 
-function fontResize() {
-    var windowWidth = $(window).width();
-    if (windowWidth >= 1200) {
-    	var fontSize = windowWidth/19.05;
-    } else if (windowWidth < 1200) {
-    	var fontSize = 60;
-    }
-	$('body').css('fontSize', fontSize + '%');
-}
+// function fontResize() {
+//     var windowWidth = $(window).width();
+//     if (windowWidth >= 1200) {
+//     	var fontSize = windowWidth/19.05;
+//     } else if (windowWidth < 1200) {
+//     	var fontSize = 60;
+//     }
+// 	$('body').css('fontSize', fontSize + '%');
+// }
 
 // Проверка направления прокрутки вверх/вниз
 function checkDirectionScroll() {

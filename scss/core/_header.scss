@@ -51,4 +51,39 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	background: #10092a;
+	animation: slide 0.5s forwards;
+
+	@media (min-width: 768px) {
+		padding: 1.1em 0;
+
+		.header__left {
+			width: 7em;
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 1.1em 0;
+
+		.header__left {
+			width: 6em;
+		}
+
+		.navbar__toggle {
+			top: 0.3em;
+		}
+	}
+
+}
+
+@keyframes slide {
+	from {
+		top: -5em;
+		opacity: 0;
+	}
+
+	to {
+		top: 0;
+		opacity: 1;
+	}
 }

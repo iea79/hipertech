@@ -141,7 +141,6 @@
          }
          ellipse, circle {
              opacity:0;
-             transition: transform .5s;
              animation: reduce_radius 0.5s 0.5s linear forwards;
          }
          @keyframes dash {

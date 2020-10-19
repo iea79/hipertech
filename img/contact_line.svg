@@ -30,9 +30,7 @@
           animation: dash 4s linear forwards;
       }
       marker path {
-          opacity:0;
-          transition: transform .5s;
-          animation: reduce_radius 0.5s 2s linear forwards;
+          animation: reduce_radius 1s linear forwards;
       }
       @keyframes dash {
          to {
@@ -40,6 +38,9 @@
          }
      }
      @keyframes reduce_radius {
+         from {
+             opacity:0
+         }
          to {
              opacity:1
          }
@@ -67,7 +68,7 @@
        orient="auto">
       <path
          transform="matrix(0.4,0,0,0.4,2.96,0.4)"
-         style="fill:#7fcaee;fill-opacity:1;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
          d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
          id="path1195" />
     </marker>
@@ -80,7 +81,7 @@
       <path
          id="path1155"
          d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         style="fill:#7fcaee;fill-opacity:1;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
          transform="matrix(0.4,0,0,0.4,2.96,0.4)" />
     </marker>
     <marker
@@ -91,7 +92,7 @@
        orient="auto">
       <path
          transform="matrix(0.4,0,0,0.4,2.96,0.4)"
-         style="fill:#7fcaee;fill-opacity:1;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
          d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
          id="path893" />
     </marker>
@@ -103,7 +104,7 @@
        orient="auto">
       <path
          transform="matrix(0.8,0,0,0.8,5.92,0.8)"
-         style="fill:#7fcaee;fill-opacity:1;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt;stroke-opacity:1"
+         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
          d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
          id="path890" />
     </marker>

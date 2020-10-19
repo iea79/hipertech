@@ -134,6 +134,11 @@ $icon_vk: "\e903";
 @import 'core/buttons';
 @import 'core/video';
 
+svg:not(:root) {
+    max-width: 100%;
+    overflow: inherit;
+}
+
 .section {
     position: relative;
     overflow: hidden;

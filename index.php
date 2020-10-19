@@ -51,7 +51,7 @@ Template Post Type: page, post
             
                foreach ($nav as $item) {
                    echo '
-                   <li class="navbar__item"><a class="navbar__link" href="'.$item["nav__link"].'">'.$item["nav__text"].'</a></li>
+                   <li class="navbar__item"><a class="navbar__link" href="'.$item["nav__link"].'" data-scroll-to>'.$item["nav__text"].'</a></li>
                    ';
                };
             ?>
@@ -119,7 +119,8 @@ Template Post Type: page, post
           <div class="lines__item"><i class="icon_line"></i></div>
           <div class="lines__item"><i class="icon_line"></i></div>
         </div>
-        <div class="solutions__name"><?php echo SCF::get( 'solutions__name' ); ?></div><img class="solutions__line wow" src="<?php echo get_template_directory_uri() ?>/img/solutions_line.svg?<?php echo date('YmdHis');?>", alt="">
+        <div class="solutions__name"><?php echo SCF::get( 'solutions__name' ); ?></div>
+        <div class="solutions__line wow"><img class="" src="<?php echo get_template_directory_uri() ?>/img/solutions_line.svg?<?php echo date('YmdHis');?>", alt=""></div>
         <div class="container_center">
           <h2 class="section__title"><?php echo SCF::get( 'solutions__title' ); ?></h2>
           <div class="solutions__list">
@@ -150,7 +151,8 @@ Template Post Type: page, post
           <div class="lines__item"></div>
           <div class="lines__item"></div>
           <div class="lines__item"></div>
-        </div><img class="whatfor__line wow" src="<?php echo get_template_directory_uri() ?>/img/whatfor_line.svg?<?php echo date('YmdHis');?>", alt="">
+        </div>
+        <div class="whatfor__line wow"><img src="<?php echo get_template_directory_uri() ?>/img/whatfor_line.svg?<?php echo date('YmdHis');?>", alt=""></div>
         <div class="container_center">
           <div class="whatfor__wrapper">
             <div class="section__title"><?php echo SCF::get( 'whatfor__title' ); ?></div>
@@ -193,7 +195,8 @@ Template Post Type: page, post
           <div class="lines__item"><i class="icon_line"></i></div>
           <div class="lines__item"><i class="icon_plus"></i><i class="icon_plus"></i></div>
         </div>
-        <div class="benefits__name"><?php echo SCF::get( 'benefits__name' ); ?></div><img class="benefits__line wow" src="<?php echo get_template_directory_uri() ?>/img/benefits_line.svg?<?php echo date('YmdHis');?>", alt="">
+        <div class="benefits__name"><?php echo SCF::get( 'benefits__name' ); ?></div>
+        <div class="benefits__line wow"><img class="" src="<?php echo get_template_directory_uri() ?>/img/benefits_line.svg?<?php echo date('YmdHis');?>", alt=""></div>
         <div class="container_center">
           <h2 class="section__title"><?php echo SCF::get( 'benefits__title' ); ?></h2>
           <div class="benefits__list">
@@ -235,8 +238,9 @@ Template Post Type: page, post
           <div class="platform__list">
             <?php
                $platform__list = SCF::get('platform__list');
-            
+               $i = 1;
                foreach ($platform__list as $item) {
+                   $line = get_template_directory_uri() .'/img/platform_line_'.$i.'.svg?'.date('YmdHis');
                    echo '
                        <div class="platform__item">
                            <div class="platform__img">
@@ -248,12 +252,13 @@ Template Post Type: page, post
                            <div class="platform__descr">
                                <div class="platform__title">'.$item["platform__title"].'</div>
                                <div class="platform__text">'.$item["platform__text"].'</div>
-                               <div class="platform__line">
-                                   <img class="wow" src="'.wp_get_attachment_url($item['platform__line']).'?'.date('YmdHis').'", alt="">
+                               <div class="platform__line wow">
+                                   <img  src="'.$line.'", alt="">
                                </div>
                            </div>
                        </div>
                    ';
+                   $i++;
                };
             ?>
           </div>
@@ -290,7 +295,8 @@ Template Post Type: page, post
           <div class="lines__item"></div>
           <div class="lines__item"></div>
           <div class="lines__item"></div>
-        </div><img class="contacts__line wow" src="<?php echo get_template_directory_uri() ?>/img/contact_line.svg?<?php echo date('YmdHis');?>", alt="">
+        </div>
+        <div class="contacts__line wow"><img src="<?php echo get_template_directory_uri() ?>/img/contact_line.svg?<?php echo date('YmdHis');?>", alt=""></div>
         <div class="container_center">
           <div class="contacts__content">
             <div class="contacts__left">
