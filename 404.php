@@ -71,6 +71,7 @@ Template Post Type: page, post
     </div>
   </header>
   <main class="main_content">
+    <h1>404</h1>
   </main>
   <footer class="footer">
     <div class="lines">

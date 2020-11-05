@@ -71,6 +71,23 @@ Template Post Type: page, post
     </div>
   </header>
   <main class="main_content">
+    <?php
+    	while ( have_posts() ) :
+    		the_post();
+    		if (is_front_page()) {
+    			require get_template_directory() . '/home.php';
+    		} else {
+              echo "<div class='container_center'>";
+              echo "<div class='textPage'>";
+              echo "<h1 class='h1'>";
+    			the_title();
+              echo "</h1>";
+              the_content();
+              echo "</div>";
+              echo "</div>";
+    		}
+    	endwhile; // End of the loop.
+    ?>
   </main>
   <footer class="footer">
     <div class="lines">

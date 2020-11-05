@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
   "dependencies": {
+    "jquery-plugin-viewport-checker": "^1.8.3",
+    "viewport-checker": "^2.0.0",
     "wowjs": "^1.1.3"
   }
 }

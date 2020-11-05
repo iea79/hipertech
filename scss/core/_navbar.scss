@@ -10,7 +10,7 @@
 		// flex-direction: row;
 	}
 
-	&__item {
+	li {
 		// display: inline-block;
 		// margin: 5px;
 		margin-bottom: 1.5em;
@@ -22,7 +22,7 @@
 		}
 	}
 
-	&__link {
+	a {
 		font-size: 1.3em;
 		text-transform: uppercase;
 		color: $color_withe;

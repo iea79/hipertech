@@ -11,6 +11,9 @@
 $icomoon-font-family: "hipertech" !default;
 $icomoon-font-path: "fonts" !default;
 
+$icon_linkedin: "\e905";
+$icon_xing: "\e906";
+$icon_youtube: "\e904";
 $icon_plus: "\e900";
 $icon_instagram: "\e901";
 $icon_facebook: "\e902";
@@ -39,6 +42,24 @@ $icon_vk: "\e903";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_linkedin {
+    &:before {
+        content: $icon_linkedin;
+    }
+}
+
+.icon_xing {
+    &:before {
+        content: $icon_xing;
+    }
+}
+
+.icon_youtube {
+    &:before {
+        content: $icon_youtube;
+    }
 }
 
 .icon_plus {
@@ -136,6 +157,7 @@ $icon_vk: "\e903";
 
 svg:not(:root) {
     max-width: 100%;
+    height: auto;
     overflow: inherit;
 }
 
@@ -172,11 +194,15 @@ svg:not(:root) {
 
 }
 
-.home {
+.homescreen {
     padding: 0.3em 0 8.5em;
     position: relative;
     overflow: hidden;
     background: url("img/home_bg.jpg") 0 0 no-repeat;
+
+    @media (min-width: 768px) {
+        min-height: 100vh;
+    }
 
     &__bg {
         display: none;
@@ -228,10 +254,14 @@ svg:not(:root) {
 
     &__title {
         h1 {
-            font-size: 2.125em;
+            font-size: 2em;
             font-weight: 500;
             line-height: 1.32;
             margin: 0 0 1.7em;
+
+            @media (min-width: 768px) {
+                font-size: 2.125em;
+            }
         }
     }
 
@@ -263,7 +293,7 @@ svg:not(:root) {
         padding: 8.2em 0;
     }
 
-    .lines__item {
+    .__item {
         .icon_line {
             top: 3.4em;
         }
@@ -320,10 +350,15 @@ svg:not(:root) {
     }
 
     &__line {
-        position: absolute;
-        top: 48.3em;
-        left: -1.2em;
-        width: 106em;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 48.3em;
+            left: -1.2em;
+            width: 106em;
+        }
     }
 
     &__list {
@@ -517,7 +552,7 @@ svg:not(:root) {
 }
 
 .whatfor {
-    padding: 4em 0 5.7em;
+    padding: 9em 0 5.7em;
     overflow: hidden;
 
     @media (min-width: 768px) {
@@ -556,9 +591,18 @@ svg:not(:root) {
 
     &__line {
         position: absolute;
-        right: -28.6em;
-        top: 4em;
-        width: 75em;
+        right: -30.6em;
+        top: 1em;
+        width: 58em;
+
+        @media (min-width: 768px) {
+            right: -21.6em;
+            width: 67em;
+        }
+
+        svg {
+            max-width: 100%;
+        }
 
         @media (min-width: 768px) {}
     }
@@ -657,17 +701,28 @@ svg:not(:root) {
         &:before {
             content: '0' counter(whatfor);
             padding-top: 0.2em;
-            font-size: 2em;
-            color: #e0e0e0;
+            font-size: 3em;
+            color: $color_primary;
             font-family: "Source Code Pro";
             margin-right: 0.4em;
+
+            @supports (background-clip: text) {
+                background: linear-gradient(to right, $color_primary 0%, #9141b8 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 4em;
+                margin-right: 0.2em;
+            }
         }
     }
 
 }
 
 .benefits {
-    padding: 4em 0 4.1em;
+    padding: 4em 0 11.1em;
     background: url("img/adv_bg.jpg") top center no-repeat;
     background-size: cover;
     color: #cad8e8;
@@ -677,7 +732,7 @@ svg:not(:root) {
         padding: 7.1em 0 6.4em;
     }
 
-    .lines__item {
+    .__item {
         padding: 24em 0 14.7em;
 
         .icon_line {
@@ -734,9 +789,14 @@ svg:not(:root) {
 
     &__line {
         position: absolute;
-        bottom: 11.9em;
-        right: -2.5em;
-        width: 72em;
+        bottom: 1.9em;
+        right: -19.5em;
+        width: 47em;
+
+        @media (min-width: 768px) {
+            bottom: 11.9em;
+            width: 72em;
+        }
     }
 
     &__list {
@@ -842,22 +902,9 @@ svg:not(:root) {
         margin-bottom: -1.2em;
     }
 
-    .lines__item {
-        padding: 24em 0 14.7em;
-
-        .icon_line {
-            top: 20%;
-
-            &:first-child {}
-
-            &:nth-child(2) {
-                top: 59%;
-            }
-
-            &:nth-child(3) {
-                top: 97.5%;
-            }
-        }
+    &__anchore {
+        position: relative;
+        top: -7em;
     }
 
     .section {
@@ -867,19 +914,15 @@ svg:not(:root) {
             margin: 0 0 0.85em;
             line-height: 1;
             opacity: 1;
-            max-width: 9em;
             cursor: default;
-            color: #fff;
-            text-shadow: -0 -1px 0 #ccc, 0 -1px 0 #ccc, -0 1px 0 #ccc, 0 1px 0 #ccc, -1px -0 0 #ccc, 1px -0 0 #ccc, -1px 0 0 #ccc, 1px 0 0 #ccc, -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc, -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
-            font-weight: 600;
-            @supports (-webkit-text-stroke: 0.005em #ccc) {
-                text-shadow: none;
-                -webkit-text-stroke: 0.02em #ccc;
-            }
+            color: $main_color;
+            position: relative;
 
             @media (min-width: 768px) {
+                max-width: 12em;
                 margin-left: -0.2em;
-                font-size: 8.14em;
+                font-size: 5.3em;
+                margin-bottom: 2em;
 
                 @supports (-webkit-text-stroke: 0.005em #ccc) {
                     text-shadow: none;
@@ -890,11 +933,38 @@ svg:not(:root) {
 
     }
 
+    &__name {
+        display: none;
+
+        @media (min-width: 768px) {
+            top: -0.2em;
+            left: 3em;
+            display: block;
+            font-size: 8.14em;
+            position: absolute;
+            font-family: $main_font_family;
+            margin: 0 0 0.85em;
+            line-height: 1;
+            opacity: 1;
+            max-width: 13em;
+            cursor: default;
+            color: #fff;
+            text-shadow: -0 -1px 0 #ccc, 0 -1px 0 #ccc, -0 1px 0 #ccc, 0 1px 0 #ccc, -1px -0 0 #ccc, 1px -0 0 #ccc, -1px 0 0 #ccc, 1px 0 0 #ccc, -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc, -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc;
+            font-weight: 600;
+
+            @supports (-webkit-text-stroke: 0.005em #ccc) {
+                text-shadow: none;
+                -webkit-text-stroke: 0.005em #ccc;
+            }
+        }
+    }
+
     &__scheme {
         margin: 0 0 4.1em;
 
         @media (min-width: 768px) {
-            margin: 0 0.7em 9.1em 1.4em;
+            position: relative;
+            margin: 0 10.7em 9.1em 10.4em;
         }
 
         img {
@@ -909,10 +979,13 @@ svg:not(:root) {
     &__item {
         counter-increment: platform;
         margin-bottom: 4em;
+        padding-bottom: 3em;
 
         @media (min-width: 768px) {
             display: flex;
+            align-items: flex-start;
             margin-bottom: 13.2em;
+            padding-bottom: 0;
         }
 
         &:nth-child(odd) {
@@ -968,7 +1041,7 @@ svg:not(:root) {
             &:nth-child(2) {
                 .platform {
                     &__img {
-                        margin-top: 9em;
+                        margin-top: 1em;
                         width: 47em;
 
                         &:before {
@@ -998,7 +1071,7 @@ svg:not(:root) {
 
                 .platform {
                     &__img {
-                        margin-top: 5.5em;
+                        margin-top: 1em;
                         width: 43.9em;
                         margin-left: 14em;
 
@@ -1026,6 +1099,7 @@ svg:not(:root) {
                     &__img {
                         width: 47em;
                         margin-right: 9.8em;
+                        margin-top: 1em;
 
                         &:before {
                             left: -1.2em;
@@ -1085,6 +1159,10 @@ svg:not(:root) {
             font-size: 1.3em;
             display: block;
             margin-bottom: 1.6em;
+
+            @media (min-width: 768px) {
+                font-size: 1.6em;
+            }
         }
     }
 
@@ -1093,11 +1171,19 @@ svg:not(:root) {
         font-size: 1.75em;
         font-weight: 500;
         margin-bottom: 1.2em;
+
+        @media (min-width: 768px) {
+            font-size: 1.9em;
+        }
     }
 
     &__text {
         font-size: 1.188em;
         line-height: 1.75em;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
 
         p {
             margin: 1.2em 0;
@@ -1126,7 +1212,7 @@ svg:not(:root) {
             color: #100a2a;
 
             @media (min-width: 768px) {
-                max-width: 17em;
+                // max-width: 17em;
                 font-size: 3.2em;
             }
         }
@@ -1139,9 +1225,14 @@ svg:not(:root) {
 
     &__content {
         position: relative;
-        margin: 0 0.2em;
+        margin: 0 auto;
+        max-width: 900px;
         z-index: 1;
         background-color: #ccc;
+
+        @media (min-width: 768px) {
+            width: 56.25em;
+        }
 
         &:after,
         &:before {
@@ -1159,8 +1250,10 @@ svg:not(:root) {
             height: 4em;
 
             @media (min-width: 768px) {
-                width: 35em;
-                height: 10em;
+                width: 26em;
+                height: 8em;
+                max-width: 50%;
+                max-height: 30%;
             }
         }
 
@@ -1171,8 +1264,10 @@ svg:not(:root) {
             height: 3.7em;
 
             @media (min-width: 768px) {
-                width: 37.7em;
-                height: 26.7em;
+                width: 32.7em;
+                height: 16.7em;
+                max-width: 50%;
+                max-height: 30%;
             }
         }
     }
@@ -1204,10 +1299,16 @@ svg:not(:root) {
 
     &__line {
         position: absolute;
-        width: 74.063em;
+        width: 60.06em;
         opacity: 0.54;
-        top: 31.1em;
-        left: -50.5em;
+        top: 21.1em;
+        left: -33.5em;
+
+        @media (min-width: 768px) {
+            top: 31.1em;
+            width: 74.063em;
+            left: -50.5em;
+        }
     }
 
     &__content {
@@ -1247,7 +1348,7 @@ svg:not(:root) {
     }
 
     &__right {
-        margin-bottom: 2em;
+        margin-bottom: 9em;
         @media (min-width: 768px) {
             margin-bottom: 0;
         }
@@ -1269,6 +1370,11 @@ svg:not(:root) {
         &:hover {
             border-bottom-color: transparent;
         }
+    }
+
+    &__address {
+        margin-top: 1em;
+        font-size: 1.2em;
     }
 
 }
@@ -1305,6 +1411,7 @@ svg:not(:root) {
             input[type=tel],
             input[type=text],
             input[type=url],
+            select,
             textarea {
                 width: 100%;
             }
@@ -1408,6 +1515,24 @@ svg:not(:root) {
                 content: $icon_vk;
             }
         }
+
+        &[href*="youtube.com"] {
+            &:before {
+                content: $icon_youtube;
+            }
+        }
+
+        &[href*="xing.com"] {
+            &:before {
+                content: $icon_xing;
+            }
+        }
+
+        &[href*="linkedin.com"] {
+            &:before {
+                content: $icon_linkedin;
+            }
+        }
     }
 }
 
@@ -1426,7 +1551,7 @@ svg:not(:root) {
     }
 
     &__item {
-        width: 0.063em;
+        width: 1px;
         background-color: rgba(#999999, .2);
         position: relative;
         display: flex;
@@ -1470,11 +1595,237 @@ svg:not(:root) {
 }
 
 .wow {
-    // display: none;
     visibility: hidden;
 
     &.animated {
         visibility: visible;
-        // display: block;
+
+        svg path {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: dash 10s linear forwards;
+        }
+
+        svg circle,
+        svg ellipse,
+        svg marker path {
+            opacity: 0;
+            animation: reduce_radius 0.5s 1s linear forwards;
+        }
     }
+}
+
+.contacts__line.animated {
+    svg path {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: dash 3s linear forwards;
+    }
+}
+
+.homescreen__img {
+    // .st0,
+    // .st1,
+    .st2,
+    .st3,
+    .st4,
+    .st5 {
+        fill: none;
+        stroke: #1A7FB8;
+        fill-opacity: 0;
+    }
+
+    .st0 {
+        filter:url(#Adobe_OpacityMaskFilter);
+    }
+
+    .st1 {
+        fill: url("#SVGID_2_");
+    }
+    //
+    .st2 {
+        mask: url("#SVGID_1_");
+        stroke: #1A7FB8;
+    }
+    //
+    // .st3 {
+    //     fill: none;
+    //     stroke: #1A7FB8;
+    // }
+    //
+    // .st4 {
+    //     fill: #1A7FB8;
+    // }
+
+    .st5 {
+        // fill: none;
+        // stroke: #1A7FB8;
+        stroke-width: 0.5;
+    }
+
+    .st6 {
+        fill: #FF0000 !important;
+    }
+
+    .st7 {
+        fill: #0000FF !important;
+    }
+
+    .st8 {
+        fill: #00A4FF !important;
+    }
+
+    .st9 {
+        fill: #FF7300 !important;
+    }
+
+    .st6,
+    .st7,
+    .st8,
+    .st9 {
+        fill-opacity: 0;
+        // transform: scale(0);
+    }
+
+    &.animated {
+        .st2,
+        .st3,
+        .st4,
+        .st5 {
+            stroke: #1A7FB8;
+        }
+
+        .st3 {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: dash 3s 1.4s linear forwards;
+        }
+
+        .st5 {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: dash 2s 0.6s linear forwards;
+        }
+
+        .st6:not(.sth) {
+            animation: scale 0.6s 1.1s linear forwards;
+        }
+
+        .st7:not(.sth) {
+            animation: scale 0.5s 0.6s linear forwards;
+        }
+
+        .st8:not(.sth) {
+            animation: scale 0.6s 0s linear forwards;
+        }
+
+        .st9:not(.sth) {}
+
+        .sth {
+            animation: scale 0.9s 2.5s linear forwards;
+        }
+
+        .st6.sth {
+            animation: scale 0.3s 2s linear forwards;
+        }
+
+        .st7.sth {
+            animation: scale 1s 2.9s linear forwards;
+        }
+
+        .st8.sth {
+            animation: scale 0.8s 2.1s linear forwards;
+        }
+    }
+
+}
+
+@keyframes scale {
+    to {
+        transform: scale(1);
+        fill-opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from {
+        fill-opacity: 0;
+        transform: translate(-2em, 0);
+    }
+
+    10% {
+        fill-opacity: 0;
+        transform: translate(-2em, 0);
+    }
+
+    30% {
+        fill-opacity: 1;
+    }
+
+    to {
+        fill-opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes slide2 {
+    from {
+        fill-opacity: 0;
+        transform: translate(-2.5em, 0);
+    }
+
+    10% {
+        fill-opacity: 0;
+        transform: translate(-2.5em, 0);
+    }
+
+    20% {
+        fill-opacity: 1;
+    }
+
+    to {
+        fill-opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes slide3 {
+    from {
+        fill-opacity: 0;
+        transform: translate(-3em, 0);
+    }
+
+    10% {
+        fill-opacity: 0;
+        transform: translate(-3em, 0);
+    }
+
+    20% {
+        fill-opacity: 1;
+    }
+
+    to {
+        fill-opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes reduce_radius {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.textPage {
+    padding: 2em 0;
+    font-size: 1.1em;
+    line-height: 1.6;
 }

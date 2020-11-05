@@ -21,6 +21,7 @@
 |*/
 |?>
 |
+- body_class = '<?php body_class() ?>';
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -39,8 +40,8 @@ html(lang="en")
         <link rel="mask-icon" href="<?php echo get_template_directory_uri() ?>/img/fav/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet", type="text/css", href="<?php echo get_template_directory_uri() ?>/style.css"/>
-    body
+        //- <link rel="stylesheet", type="text/css", href="<?php echo get_template_directory_uri() ?>/style.css"/>
+    <body <?php body_class() ?>>
         include header.pug
 
         main.main_content
@@ -49,3 +50,5 @@ html(lang="en")
         include footer.pug
 
         include scripts.pug
+
+    </body>

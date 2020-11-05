@@ -35,6 +35,7 @@ input[type=search],
 input[type=tel],
 input[type=text],
 input[type=url],
+select,
 textarea {
 	background-color: $input_bg_color;
 	border: 0.063em solid $input_border_color;

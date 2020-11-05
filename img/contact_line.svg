@@ -6,11 +6,11 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 1186.733 200.88106"
-   id="svg8"
-   height="200.88106"
+   version="1.1"
    width="1186.733"
-   version="1.1">
+   height="200.88106"
+   id="svg8"
+   viewBox="0 0 1186.733 200.88106">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -23,8 +23,10 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <style type="text/css">
-      path {
+  <style
+     id="style3"
+     type="text/css">
+    <!-- path {
           stroke-dasharray: 2000;
           stroke-dashoffset: 2000;
           animation: dash 4s linear forwards;
@@ -44,119 +46,91 @@
          to {
              opacity:1
          }
-     }
+     } -->
   </style>
-
   <defs
      id="defs12">
     <linearGradient
        id="linearGradient2125">
       <stop
-         id="stop2121"
+         style="stop-color:#7fcaee;stop-opacity:1;"
          offset="0"
-         style="stop-color:#7fcaee;stop-opacity:1;" />
+         id="stop2121" />
       <stop
-         id="stop2123"
+         style="stop-color:#7fcaee;stop-opacity:0;"
          offset="1"
-         style="stop-color:#7fcaee;stop-opacity:0;" />
+         id="stop2123" />
     </linearGradient>
-    <marker
-       style="overflow:visible"
-       id="marker1197"
-       refX="0"
-       refY="0"
-       orient="auto">
-      <path
-         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
-         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         id="path1195" />
-    </marker>
-    <marker
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="marker1157"
-       style="overflow:visible">
-      <path
-         id="path1155"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
-         transform="matrix(0.4,0,0,0.4,2.96,0.4)" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="DotM"
-       refX="0"
-       refY="0"
-       orient="auto">
-      <path
-         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
-         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         id="path893" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="DotL"
-       refX="0"
-       refY="0"
-       orient="auto">
-      <path
-         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
-         style="fill:#7fcaee;fill-rule:evenodd;stroke:#7fcaee;stroke-width:1.00000003pt"
-         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
-         id="path890" />
-    </marker>
     <linearGradient
        id="linearGradient825">
       <stop
-         id="stop821"
+         style="stop-color:#7fcaee;stop-opacity:1;"
          offset="0"
-         style="stop-color:#7fcaee;stop-opacity:1;" />
+         id="stop821" />
       <stop
-         id="stop823"
+         style="stop-color:#7fcaee;stop-opacity:0;"
          offset="1"
-         style="stop-color:#7fcaee;stop-opacity:0;" />
+         id="stop823" />
     </linearGradient>
     <linearGradient
-       gradientTransform="translate(196.97461,-205.8498)"
-       gradientUnits="userSpaceOnUse"
-       y2="350.5285"
-       x2="-25.202547"
-       y1="359.6048"
-       x1="503.55435"
+       xlink:href="#linearGradient825"
        id="linearGradient827"
-       xlink:href="#linearGradient825" />
-    <linearGradient
-       gradientTransform="translate(196.97461,-205.8498)"
-       y2="313.70541"
-       x2="-196.075"
-       y1="308.51898"
-       x1="321.27246"
+       x1="503.55435"
+       y1="359.6048"
+       x2="-25.202547"
+       y2="350.5285"
        gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(196.97461,-205.8498)" />
+    <linearGradient
+       xlink:href="#linearGradient825"
        id="linearGradient1549"
-       xlink:href="#linearGradient825" />
-    <linearGradient
-       gradientTransform="translate(196.97461,-205.8498)"
        gradientUnits="userSpaceOnUse"
-       y2="261.73065"
-       x2="76.944862"
-       y1="255.2476"
-       x1="504.03189"
+       x1="321.27246"
+       y1="308.51898"
+       x2="-196.075"
+       y2="313.70541"
+       gradientTransform="translate(196.97461,-205.8498)" />
+    <linearGradient
+       xlink:href="#linearGradient2125"
        id="linearGradient2127"
-       xlink:href="#linearGradient2125" />
+       x1="504.03189"
+       y1="255.2476"
+       x2="76.944862"
+       y2="261.73065"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(196.97461,-205.8498)" />
   </defs>
   <path
-     id="path2"
-     style="fill:none;fill-opacity:0;stroke:url(#linearGradient827);stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;marker-end:url(#DotM)"
-     d="m 172.32171,94.929105 c 88.5002,75.249895 192.2851,-23.9148 288.0006,-15.0001 146.6095,13.6547 260.6468,102.476895 402.9766,118.423795 115.3737,12.9266 179.76499,-76.2284 262.70159,-81.324" />
+     d="m 172.32171,94.929105 c 88.5002,75.249895 192.2851,-23.9148 288.0006,-15.0001 146.6095,13.6547 260.6468,102.476895 402.9766,118.423795 115.3737,12.9266 179.76499,-76.2284 262.70159,-81.324"
+     style="fill:none;fill-opacity:0;stroke:url(#linearGradient827);stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4"
+     id="path2" />
   <path
-     id="path4"
-     style="fill:none;fill-opacity:0;stroke:url(#linearGradient2127);stroke-width:2.4999001;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#marker1197)"
-     d="m 316.18251,20.819505 c 91.4423,-20.16900041 141.0114,-23.1021004 211.326,-16.2323004 110.1061,10.7575004 217.3186,46.6217004 324.7234,68.6052004 88.1144,18.0352 197.53649,43.346295 328.93029,2.0192" />
+     d="m 316.18251,20.819505 c 91.4423,-20.16900041 141.0114,-23.1021004 211.326,-16.2323004 110.1061,10.7575004 217.3186,46.6217004 324.7234,68.6052004 88.1144,18.0352 197.53649,43.346295 328.93029,2.0192"
+     style="fill:none;fill-opacity:0;stroke:url(#linearGradient2127);stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4"
+     id="path4" />
   <path
-     id="path6"
-     style="fill:none;fill-opacity:0;stroke:url(#linearGradient1549);stroke-width:2.4999001;stroke-linecap:butt;stroke-linejoin:miter;marker-end:url(#marker1157)"
-     d="m 0.8996113,107.8556 c 74.9803997,77.7291 217.1817987,51.2051 322.4411987,22.8115 47.0192,-12.6833 91.3805,-22.7259 138.2868,-22.8668 106.7686,-0.3203 187.9926,42.287 297.8739,22.9306 40.3677,-7.1113 81.0134,-21.251 122.0361,-35.176795 77.1655,-26.1952 144.99069,-35.3078 193.97109,-18.5298" />
+     d="m 0.8996113,107.8556 c 74.9803997,77.7291 217.1817987,51.2051 322.4411987,22.8115 47.0192,-12.6833 91.3805,-22.7259 138.2868,-22.8668 106.7686,-0.3203 187.9926,42.287 297.8739,22.9306 40.3677,-7.1113 81.0134,-21.251 122.0361,-35.176795 77.1655,-26.1952 144.99069,-35.3078 193.97109,-18.5298"
+     style="fill:none;fill-opacity:0;stroke:url(#linearGradient1549);stroke-width:2.4999001;stroke-linecap:butt;stroke-linejoin:miter"
+     id="path6" />
+  <ellipse
+     ry="4.9072924"
+     rx="5.3162332"
+     cy="76.971924"
+     cx="1075.5148"
+     id="path858"
+     style="fill:#00bbdf;fill-opacity:0.98823529;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26.45999908;stroke-opacity:0.69411765" />
+  <ellipse
+     ry="4.9072924"
+     rx="5.3162332"
+     cy="117.25262"
+     cx="1123.9744"
+     id="path858-3"
+     style="fill:#00bbdf;fill-opacity:0.98823529;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26.45999908;stroke-opacity:0.69411765" />
+  <ellipse
+     ry="4.9072924"
+     rx="5.3162332"
+     cy="75.336166"
+     cx="1180.8173"
+     id="path858-3-6"
+     style="fill:#00bbdf;fill-opacity:0.98823529;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:26.45999908;stroke-opacity:0.69411765" />
 </svg>

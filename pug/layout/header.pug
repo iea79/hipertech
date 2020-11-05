@@ -2,23 +2,18 @@ header.header
     .header__content
         .header__left
             a.logo(href="/")
-                <img src="<?php echo wp_get_attachment_url(SCF::get( 'logotip' )) ?>" />
+                |<?php echo get_custom_logo( $blog_id ); ?>
         .navbar__toggle
         nav.header__right.nav
-            ul.navbar
-                |<?php
-                |    $nav = SCF::get('nav');
-                |
-                |    foreach ($nav as $item) {
-                |        echo '
-                |        <li class="navbar__item"><a class="navbar__link" href="'.$item["nav__link"].'" data-scroll-to>'.$item["nav__text"].'</a></li>
-                |        ';
-                |    };
-                |?>
 
-                //- each navLink in [{name: 'Платформа HiPer', href: ''},{name: 'Принцип работы', href: ''},{name: 'Преимущества', href: ''},{name: 'Решения', href: ''},{name: 'Пакеты услуг', href: ''},{name: 'Контакты', href: ''},]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+            |<?php
+            |    wp_nav_menu( array(
+            |        'theme_location' => 'menu1',
+            |        'menu_id'        => 'main-menu',
+            |        'container'      => '',
+            |        'menu_class'     => 'navbar',
+            |    ) );
+            |?>
 
             .lang
                 |<?php
@@ -26,11 +21,11 @@ header.header
                 |    $languages = icl_get_languages('skip_missing=0&orderby=code');
                 |    // echo json_encode($languages);
                 |    if(!empty($languages)){
-                |        foreach($languages as $act){
-                |            if($act['active']) {
-                |                echo '<a class="lang__link active" href="">'.$act['code'].'</a>';
-                |            }
-                |        }
+                //- |        foreach($languages as $act){
+                //- |            if($act['active']) {
+                //- |                //echo '<a class="lang__link active" href="">'.$act['code'].'</a>';
+                //- |            }
+                //- |        }
                 |        foreach($languages as $l){
                 |            if(!$l['active']) {
                 |                echo '<a  class="lang__link" href="'.$l['url'].'">'.$l['code'].'</a>';

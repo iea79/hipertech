@@ -83,7 +83,7 @@
   <style
      type="text/css"
      id="style25">
-      path {
+      <!-- path {
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
           animation: dash 6s linear forwards;
@@ -103,7 +103,7 @@
          to {
              opacity: 1;
          }
-     }
+     } -->
   </style>
   <g
      id="layer1"

@@ -228,7 +228,7 @@
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false" />
      <style type="text/css">
-         path {
+         <!-- path {
              stroke-dasharray: 1000;
              stroke-dashoffset: 1000;
              animation: dash 6s linear forwards;
@@ -246,7 +246,7 @@
             to {
                 opacity:1;
             }
-        }
+        } -->
      </style>
   <g
      inkscape:label="Слой 1"

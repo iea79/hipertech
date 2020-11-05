@@ -9,6 +9,11 @@
 	z-index: 99;
 	// background-color: #ddd;
 
+	.page:not(.home) & {
+		background-color: #10092a;
+		position: sticky;
+	}
+
 	@media (min-width: 768px) {
 		padding: 2.1em 0;
 	}

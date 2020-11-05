@@ -14,7 +14,7 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080"
 	 style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	<!-- .st0{filter:url(#Adobe_OpacityMaskFilter);}
 	.st1{fill:url(#SVGID_2_);}
 	.st2{mask:url(#SVGID_1_);stroke:#1A7FB8;stroke-miterlimit:10;}
 	.st3{fill:none;stroke:#1A7FB8;stroke-miterlimit:10;}
@@ -104,7 +104,7 @@
 	    fill-opacity:1;
 		transform: translate(0, 0);
 	  }
-	}
+	} -->
 
 </style>
 <switch>

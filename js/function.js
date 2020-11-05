@@ -43,37 +43,30 @@ $(document).ready(function() {
 
     $('.home__bg').show();
 
+    $('.wow').viewportChecker({
+        classToAdd: 'animated', // Class to add to the elements when they are visible,
+        classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
+        classToRemove: 'invisible', // Class to remove before adding 'classToAdd' to the elements
+        removeClassAfterAnimation: false, // Remove added classes after animation has finished
+        offset: 100, // The offset of the elements (let them appear earlier or later). This can also be percentage based by adding a '%' at the end
+        invertBottomOffset: true, // Add the offset as a negative number to the element's bottom
+        repeat: true, // Add the possibility to remove the class if the elements are not visible
+    });
+
+    $('[src*=".svg"]:not(.video__play)').each(function(index, el) {
+        let img = $(el),
+            path = img.attr('src');
+
+        $.get(path, function(data) {
+            // svg = $(el).find('svg');
+            $(img).hide();
+            $(img).parent().append($(data));
+        }, 'text');
+
+    });
 
 });
 
-var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       false,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-        let img = $(box).find('img');
-        let path = img.attr('src');
-        // console.log(box);
-        // console.log(path);
-        // // $(box).hide();
-        // // $(box).show();
-        $.get(path, function(data) {
-            var svgEl = $(data);
-            $(img).hide();
-            $(img).parent().append(svgEl);
-        }, 'text');
-        setTimeout(function () {
-        }, 500);
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-  }
-);
-wow.init();
-// $('.wow').hide();
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
@@ -139,11 +132,15 @@ openMobileNav();
 function srollToId() {
     $('[data-scroll-to]').click( function(e){
         e.preventDefault();
-        var scrollEl = $(this).attr('href');
-        if ($(scrollEl).length != 0) {
-            $('html, body').animate({ scrollTop: $(scrollEl).offset().top }, 500);
+        var href = $(this).attr('href');
+        if (href.charAt(0) === '#') {
+            if ($(href).length != 0) {
+                $('html, body').animate({ scrollTop: $(href).offset().top }, 500);
+            }
+            return false;
+        } else {
+            document.location.href = href;
         }
-        return false;
     });
 }
 srollToId();

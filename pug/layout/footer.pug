@@ -9,7 +9,7 @@ footer.footer
         .lines__item
 
     .footer__content
-        | © HiPer. <?php echo SCF::get( 'copy' ); ?> 
-        <a href="<?php echo SCF::get( 'privacy__link' ); ?>"><?php echo SCF::get( 'privacy' ); ?></a>
+        | © HiPer IT. <?php echo SCF::get( 'copy' ); ?> 
+        |<?php the_privacy_policy_link(); ?>
         |
         |<?php wp_footer() ?>
