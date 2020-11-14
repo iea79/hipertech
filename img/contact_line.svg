@@ -23,10 +23,10 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <style
+  <!-- <style
      id="style3"
      type="text/css">
-    <!-- path {
+    path {
           stroke-dasharray: 2000;
           stroke-dashoffset: 2000;
           animation: dash 4s linear forwards;
@@ -46,8 +46,8 @@
          to {
              opacity:1
          }
-     } -->
-  </style>
+     }
+  </style> -->
   <defs
      id="defs12">
     <linearGradient

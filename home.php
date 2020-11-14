@@ -203,6 +203,41 @@
   </div>
 </section>
 <!-- end monitoring-->
+<!-- begin faq-->
+<section class="faq section" id="faq">
+  <div class="lines">
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+    <div class="lines__item"></div>
+  </div>
+  <div class="container_center">
+    <h2 class="section__title"><?php echo SCF::get( 'faq__title' ); ?></h2>
+    <div class="faq__name"><?php echo SCF::get( 'faq__title' ); ?></div>
+    <div class="faq__content">
+      <?php
+         $faq__list = SCF::get('faq__list');
+      
+         foreach ($faq__list as $item) {
+             echo '
+             <div class="faq__item">
+                 <div class="faq__quest">'.$item["faq__quest"].'
+                     <div class="faq__toggle"></div>
+                 </div>
+                 <div class="faq__text">
+                     '.$item["faq__text"].'
+                 </div>
+             </div>
+             ';
+         };
+      ?>
+    </div>
+  </div>
+</section>
+<!-- end faq-->
 <!-- begin contacts-->
 <section class="contacts section" id="contacts">
   <div class="lines">
@@ -219,10 +254,10 @@
     <div class="contacts__content">
       <div class="contacts__left">
         <div class="contacts__legend"><?php echo SCF::get( 'contacts__legend' ); ?></div>
-        <div class="contacts__sub"><?php echo SCF::get( 'contacts__sub' ); ?></div><?php echo do_shortcode( '[contact-form-7 id="10" title="Контактная форма 1"]' ); ?>
+        <div class="contacts__sub"><?php echo SCF::get( 'contacts__sub' ); ?></div><?php echo do_shortcode( '[contact-form-7 id="354" title="Contact form"]' ); ?>
       </div>
       <div class="contacts__right">
-        <h2 class="section__title">Контакты</h2><a class="contacts__mail" href="mailto: <?php echo SCF::get( 'contacts__mail' ); ?>"><?php echo SCF::get( 'contacts__mail' ); ?></a>
+        <h2 class="section__title"><?php echo SCF::get( 'contact__title' ); ?></h2><a class="contacts__mail" href="mailto: <?php echo SCF::get( 'contacts__mail' ); ?>"><?php echo SCF::get( 'contacts__mail' ); ?></a>
         <div class="soc">
           <?php
              $soc = SCF::get('soc');

@@ -10,6 +10,6 @@ footer.footer
 
     .footer__content
         | © HiPer IT. <?php echo SCF::get( 'copy' ); ?> 
-        |<?php the_privacy_policy_link(); ?>
+        a(href!="<?php echo get_privacy_policy_url(); ?>", target="_blank") <?php echo SCF::get( 'privacy' ); ?>
         |
         |<?php wp_footer() ?>

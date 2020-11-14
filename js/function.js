@@ -65,6 +65,11 @@ $(document).ready(function() {
 
     });
 
+    $('.faq__toggle').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).closest('.faq__item').find('.faq__text').slideToggle();
+    });
+
 });
 
 

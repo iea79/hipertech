@@ -99,10 +99,7 @@ Template Post Type: page, post
       <div class="lines__item"></div>
       <div class="lines__item"></div>
     </div>
-    <div class="footer__content">
-      © HiPer IT. <?php echo SCF::get( 'copy' ); ?> 
-      <?php the_privacy_policy_link(); ?>
-      
+    <div class="footer__content">© HiPer IT. <?php echo SCF::get( 'copy' ); ?> <a href="<?php echo get_privacy_policy_url(); ?>" target="_blank"><?php echo SCF::get( 'privacy' ); ?></a>
       <?php wp_footer() ?>
     </div>
   </footer><?php echo SCF::get( 'analize' ); ?></body>

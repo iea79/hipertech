@@ -265,6 +265,40 @@ section#monitoring.monitoring.section
 
 // end monitoring
 
+// begin faq
+section#faq.faq.section
+    .lines
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+        .lines__item
+    .container_center
+        h2.section__title <?php echo SCF::get( 'faq__title' ); ?>
+        .faq__name <?php echo SCF::get( 'faq__title' ); ?>
+        .faq__content
+            |<?php
+            |    $faq__list = SCF::get('faq__list');
+            |
+            |    foreach ($faq__list as $item) {
+            |        echo '
+            |        <div class="faq__item">
+            |            <div class="faq__quest">'.$item["faq__quest"].'
+            |                <div class="faq__toggle"></div>
+            |            </div>
+            |            <div class="faq__text">
+            |                '.$item["faq__text"].'
+            |            </div>
+            |        </div>
+            |        ';
+            |    };
+            |?>
+
+
+// end faq
+
 // begin contacts
 section#contacts.contacts.section
     .lines
@@ -283,9 +317,9 @@ section#contacts.contacts.section
             .contacts__left
                 .contacts__legend <?php echo SCF::get( 'contacts__legend' ); ?>
                 .contacts__sub <?php echo SCF::get( 'contacts__sub' ); ?>
-                |<?php echo do_shortcode( '[contact-form-7 id="10" title="Контактная форма 1"]' ); ?>
+                |<?php echo do_shortcode( '[contact-form-7 id="354" title="Contact form"]' ); ?>
             .contacts__right
-                h2.section__title Контакты
+                h2.section__title <?php echo SCF::get( 'contact__title' ); ?>
                 <a class="contacts__mail" href="mailto: <?php echo SCF::get( 'contacts__mail' ); ?>"><?php echo SCF::get( 'contacts__mail' ); ?></a>
                 .soc
                     |<?php
