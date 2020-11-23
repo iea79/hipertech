@@ -82,14 +82,21 @@
           <div class="whatfor__right desktop"><?php echo SCF::get( 'whatfor__right' ); ?> </div>
         </div>
         <div class="whatfor__bottom">
-          <div class="whatfor__label"><?php echo SCF::get( 'whatfor__label' ); ?>:</div>
+          <div class="whatfor__label"><?php echo SCF::get( 'whatfor__label' ); ?></div>
           <div class="whatfor__list">
             <?php
                $whatfor__list = SCF::get('whatfor__list');
             
                foreach ($whatfor__list as $item) {
                    echo '
-                   <div class="whatfor__listItem">'.$item["whatfor__listItem"].'</div>
+                   <div class="whatfor__listItem">
+                       <div class="whatfor__listContent">
+                           <div class="whatfor__listTitle">
+                           '.$item["whatfor__listTitle"].'
+                           </div>
+                           '.$item["whatfor__listItem"].'
+                       </div>
+                   </div>
                    ';
                };
             ?>
@@ -158,13 +165,21 @@
          $platform__list = SCF::get('platform__list');
          $i = 1;
          foreach ($platform__list as $item) {
+             if ($item['platform__img_2']) {
+                $imgs = '<img src="'.wp_get_attachment_url($item['platform__img']).'", alt=""><img src="'.wp_get_attachment_url($item['platform__img_2']).'", alt="">';
+             } else {
+                 $imgs = '<img src="'.wp_get_attachment_url($item['platform__img']).'", alt="">';
+             }
              $line = get_template_directory_uri() .'/img/platform_line_'.$i.'.svg?'.date('YmdHis');
              echo '
                  <div class="platform__item">
                      <div class="platform__img">
                          <div class="platform__plus">
                              <span></span>
-                             <img src="'.wp_get_attachment_url($item['platform__img']).'", alt="">
+                             
+                             <div class="platform__slider">
+                                 '.$imgs.'
+                             </div>
                          </div>
                      </div>
                      <div class="platform__descr">
@@ -203,7 +218,7 @@
   </div>
 </section>
 <!-- end monitoring-->
-<!-- begin faq-->
+<!-- begin faq--><!--
 <section class="faq section" id="faq">
   <div class="lines">
     <div class="lines__item"></div>
@@ -236,7 +251,7 @@
       ?>
     </div>
   </div>
-</section>
+</section>-->
 <!-- end faq-->
 <!-- begin contacts-->
 <section class="contacts section" id="contacts">

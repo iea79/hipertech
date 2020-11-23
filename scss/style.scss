@@ -154,6 +154,7 @@ $icon_vk: "\e903";
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+@import 'vendor/slick';
 
 svg:not(:root) {
     max-width: 100%;
@@ -678,50 +679,63 @@ svg:not(:root) {
             margin-left: -4em;
             display: flex;
         }
-    }
 
-    &__listItem {
-        counter-increment: whatfor;
-        font-size: 1.188em;
-        line-height: 1.8em;
-        width: 100%;
-        margin-bottom: 1em;
-        display: flex;
-
-        @media (min-width: 768px) {
-            padding-right: 1em;
-            width: 25%;
-            margin-bottom: 0;
-
-            &:last-child {
-                width: 27%;
-            }
-
-            &:nth-child(2) {
-                width: 27%;
-                padding-right: 2em;
-            }
-        }
-
-        &:before {
-            content: '0' counter(whatfor);
-            padding-top: 0.2em;
-            font-size: 3em;
-            color: $color_primary;
-            font-family: "Source Code Pro";
-            margin-right: 0.4em;
-
-            @supports (background-clip: text) {
-                background: linear-gradient(to right, $color_primary 0%, #9141b8 100%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+        &Title {
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            line-height: 1.4;
 
             @media (min-width: 768px) {
-                font-size: 4em;
-                margin-right: 0.2em;
+                min-height: 2.7em;
             }
         }
+
+        &Content {}
+
+        &Item {
+            counter-increment: whatfor;
+            font-size: 1.425em;
+            line-height: 1.8em;
+            width: 100%;
+            margin-bottom: 1em;
+            display: flex;
+
+            @media (min-width: 768px) {
+                padding-right: 1em;
+                width: 25%;
+                margin-bottom: 0;
+
+                &:last-child {
+                    width: 27%;
+                }
+
+                &:nth-child(2) {
+                    width: 27%;
+                    padding-right: 2em;
+                }
+            }
+
+            &:before {
+                content: '0' counter(whatfor);
+                padding-top: 0.2em;
+                font-size: 2.3em;
+                color: $color_primary;
+                font-family: "Source Code Pro";
+                margin-right: 0.4em;
+
+                @supports (background-clip: text) {
+                    background: linear-gradient(to right, $color_primary 0%, #9141b8 100%);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @media (min-width: 768px) {
+                    font-size: 3.5em;
+                    margin-right: 0.2em;
+                }
+            }
+        }
+
     }
 
 }
@@ -1132,6 +1146,8 @@ svg:not(:root) {
             display: block;
         }
     }
+
+    &__slider {}
 
     &__plus {
         position: relative;

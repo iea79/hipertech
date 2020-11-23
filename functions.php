@@ -129,6 +129,9 @@ function frontendie_scripts() {
 	wp_enqueue_script( 'jquery' );
 
 
+	wp_register_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array(), '2135454647', true );
+	wp_enqueue_script( 'slick' );
+
 	wp_register_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array(), '2135454647', true );
 	wp_enqueue_script( 'wow' );
 
